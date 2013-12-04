@@ -1,0 +1,247 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45debug31.4.dtd" >
+   <PATCH nodename="C:\Users\joreg\dev\repos\vvvv\public\vvvv45\packs\VVVV.Packs.Image\girlpower\RGB+D\Subpatches\Devices.v4p" systemname="devices" filename="E:\projects files\RGBProject\devices.v4p">
+   <BOUNDS type="Window" left="6525" top="3960" width="8985" height="9075">
+   </BOUNDS>
+   <NODE systemname="Cons (CV.Image)" filename="%VVVV%\addonpack\lib\nodes\plugins\VVVV.Nodes.OpenCV.dll" nodename="Cons (OpenCV)" componentmode="Hidden" id="8">
+   <BOUNDS type="Node" left="2235" top="6705" width="1395" height="270">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="12" systemname="IOBox (Node)">
+   <BOUNDS type="Node" left="2250" top="7425" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2250" top="7425" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="Output">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="8" srcpinname="Output" dstnodeid="12" dstpinname="Input Node">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="13" systemname="IOBox (Node)">
+   <BOUNDS type="Node" left="7350" top="7395" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="7350" top="7395" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="World">
+   </PIN>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="15" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="1635" top="195" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1635" top="195" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\DX11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="Hidden" id="36">
+   <BOUNDS type="Node" left="510" top="7080" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="510" top="7080" width="6000" height="4500">
+   </BOUNDS>
+   <BOUNDS type="Window" left="0" top="7710" width="6240" height="5010">
+   </BOUNDS>
+   <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Background Color" slicecount="1" values="|0.44704,0.44704,0.44704,1.00000|">
+   </PIN>
+   <PIN pinname="Show Alpha" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="AsTexture (CV.Image DX11.Texture2D)" filename="%VVVV%\packs\imagepack\nodes\plugins\VVVV.Nodes.OpenCV.dll" nodename="AsTexture (OpenCV DX11.Texture2D)" componentmode="Hidden" id="37">
+   <BOUNDS type="Node" left="510" top="6675" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Image" visible="1">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Kinect (Devices Microsoft)" filename="%VVVV%\packs\DX11\nodes\plugins\VVVV.DX11.Nodes.MSKinect.dll" nodename="Kinect (Devices Microsoft)" componentmode="Hidden" id="38">
+   <BOUNDS type="Node" left="1080" top="900" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Kinect Runtime" visible="1">
+   </PIN>
+   <PIN pinname="Enable Color" visible="1">
+   </PIN>
+   <PIN pinname="Enable Depth" visible="1">
+   </PIN>
+   <PIN pinname="High Res Depth" visible="1">
+   </PIN>
+   <PIN pinname="Enable Skeleton" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
+   <PIN pinname="Infrared Color" slicecount="1" values="1" visible="1">
+   </PIN>
+   <PIN pinname="Depth Range" slicecount="1" values="Default">
+   </PIN>
+   <PIN pinname="Skeleton Mode" slicecount="1" values="Default">
+   </PIN>
+   </NODE>
+   <NODE systemname="RGB (Kinect Microsoft)" filename="%VVVV%\packs\DX11\nodes\plugins\VVVV.DX11.Nodes.MSKinect.dll" nodename="RGB (Kinect Microsoft)" componentmode="Hidden" id="40">
+   <BOUNDS type="Node" left="1080" top="1950" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Kinect Runtime" visible="1">
+   </PIN>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="1080" top="1950">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="World (Kinect Microsoft)" filename="%VVVV%\packs\DX11\nodes\plugins\VVVV.DX11.Nodes.MSKinect.dll" nodename="World (Kinect Microsoft)" componentmode="Hidden" id="41">
+   <BOUNDS type="Node" left="7350" top="1950" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Kinect Runtime" visible="1">
+   </PIN>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="7350" top="1950">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="38" srcpinname="Kinect Runtime" dstnodeid="40" dstpinname="Kinect Runtime">
+   </LINK>
+   <LINK srcnodeid="38" srcpinname="Kinect Runtime" dstnodeid="41" dstpinname="Kinect Runtime">
+   </LINK>
+   <NODE systemname="AsImage (DX11.Texture2D)" filename="%VVVV%\packs\imagepack\nodes\plugins\VVVV.Nodes.OpenCV.dll" nodename="AsImage (OpenCV DX11.Texture2D)" componentmode="Hidden" id="44">
+   <BOUNDS type="Node" left="7350" top="6645" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="44" srcpinname="Output" dstnodeid="13" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="38" dstpinname="Enable Color">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="38" dstpinname="Enable Depth">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="38" dstpinname="High Res Depth">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="38" dstpinname="Enabled">
+   </LINK>
+   <LINK srcnodeid="41" srcpinname="Texture" dstnodeid="44" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="37" srcpinname="Texture Out" dstnodeid="36" dstpinname="Texture In">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="38" dstpinname="Infrared Color">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="70" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="3375" top="915" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3375" top="915" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="38" srcpinname="Is Started" dstnodeid="70" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="ListDevices (DeckLink)" filename="%VVVV%\packs\VVVV.Packs.Image\nodes\plugins\VVVV.Nodes.DeckLink.dll" nodename="ListDevices (DeckLink)" componentmode="Hidden" id="10">
+   <BOUNDS type="Node" left="3570" top="2985" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Refresh" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Device" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="VideoIn (DeckLink EX9.Texture)" filename="%VVVV%\packs\VVVV.Packs.Image\nodes\plugins\VVVV.Nodes.DeckLink.dll" nodename="VideoIn (DeckLink EX9.Texture)" componentmode="Hidden" id="71">
+   <BOUNDS type="Node" left="3570" top="4575" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Device" visible="1">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="10" srcpinname="Device" dstnodeid="71" dstpinname="Device">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="72" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="3750" top="3435" width="2220" height="255">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3750" top="3435" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="10" srcpinname="Display Name" dstnodeid="72" dstpinname="Input String">
+   </LINK>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="73" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="3750" top="4095" width="2055" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3750" top="4095" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" values="bmdModeHD1080p2398">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="73" srcpinname="Output Enum" dstnodeid="71" dstpinname="Video mode">
+   </LINK>
+   <NODE systemname="DX9ToDX11" filename="%VVVV%\packs\VVVV.Packs.Image\girlpower\RGB+D\Subpatches\DX9ToDX11.v4p" nodename="%VVVV%\packs\VVVV.Packs.Image\girlpower\RGB+D\Subpatches\DX9ToDX11.v4p" componentmode="Hidden" id="77">
+   <BOUNDS type="Node" left="3570" top="5250" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture In" visible="1">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="3570" top="5250">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="71" srcpinname="Texture Out" dstnodeid="77" dstpinname="Texture In">
+   </LINK>
+   <NODE systemname="AsImage (DX11.Texture2D)" filename="%VVVV%\packs\VVVV.Packs.Image\nodes\plugins\VVVV.Nodes.OpenCV.dll" nodename="AsImage (DX11.Texture2D)" componentmode="Hidden" id="78">
+   <BOUNDS type="Node" left="3570" top="5850" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="3570" top="5850">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="77" srcpinname="Texture Out" dstnodeid="78" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="78" srcpinname="Output" dstnodeid="8" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="CleanIR" filename="%VVVV%\packs\VVVV.Packs.Image\girlpower\RGB+D\Subpatches\CleanIR.v4p" nodename="%VVVV%\packs\VVVV.Packs.Image\girlpower\RGB+D\Subpatches\CleanIR.v4p" componentmode="Hidden" id="79">
+   <BOUNDS type="Node" left="1078" top="2982" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="0" top="0" width="5265" height="6850">
+   </BOUNDS>
+   <BOUNDS type="Window" left="7858" top="8352" width="5265" height="6850">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="79" srcpinname="Output" dstnodeid="37" dstpinname="Image">
+   </LINK>
+   <LINK srcnodeid="79" srcpinname="Output" dstnodeid="8" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="40" srcpinname="Texture" dstnodeid="79" dstpinname="Texture In">
+   </LINK>
+   </PATCH>
